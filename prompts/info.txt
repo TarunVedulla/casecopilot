@@ -1,0 +1,1 @@
+   System prompt versions v1 (baseline), v2 (structured), v3 (rules + examples + self-check)
