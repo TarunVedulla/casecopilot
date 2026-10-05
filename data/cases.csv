@@ -1,0 +1,41 @@
+case_id,sender_type,subject,body,gold_category,gold_priority,gold_ae,difficulty
+C01,patient,Headache after injection,"Hi, since my last Velorimab injection on Tuesday I have had a strong headache every afternoon. Is this normal? I am due again next week.",ADVERSE_EVENT,HIGH,1,explicit
+C02,caregiver,Order question,"Hello, I need to know when the next delivery of Velorimab reaches the pharmacy in Lichtenberg. My mother had to go to hospital last month with a bad infection so she skipped one dose, but now she is back on it. Thank you, K. Neumann",ADVERSE_EVENT,HIGH,1,buried
+C03,patient,Pregnant,I just found out I am 6 weeks pregnant. I have been taking Cardoxan every day. What should I do?,ADVERSE_EVENT,HIGH,1,special_situation
+C04,patient,Took two tablets,By mistake I took two Cardoxan tablets this morning instead of one. I feel fine. Do I need to do anything?,ADVERSE_EVENT,HIGH,1,special_situation
+C05,hcp,Patient report,"Dear Medical Information, one of my patients (male, 54) developed a generalised rash 10 days after starting Velorimab. Treatment was paused. Please send me the reporting form. Dr. med. A. Fischer, Praxis Fischer, Berlin",ADVERSE_EVENT,HIGH,1,explicit
+C06,patient,Not working,I have been on Velorimab for four months now and honestly I don't see any improvement at all. My skin is exactly as bad as before. Is there a higher dose?,ADVERSE_EVENT,HIGH,1,special_situation
+C07,patient,Pen stuck,"Der Pen hat heute nicht ausgelöst, die Nadel kam raus aber nichts wurde gespritzt. Beim zweiten Versuch habe ich mich in den Finger gestochen und es blutet ein bisschen. Brauche einen neuen Pen.",ADVERSE_EVENT,HIGH,1,buried
+C08,caregiver,Child took tablet,My 4 year old grandson found my Cardoxan box and we think he swallowed one tablet about an hour ago. He seems ok.,ADVERSE_EVENT,HIGH,1,special_situation
+C09,patient,Nebenwirkung?,"Guten Tag, seit ich Cardoxan nehme habe ich oft Schwindel am Morgen. Mein Arzt weiß Bescheid. Ich wollte es nur melden. Viele Grüße",ADVERSE_EVENT,HIGH,1,explicit
+C10,patient,Travel + question,"I'm flying to Lisbon next month. Can I take my Velorimab pens in hand luggage? Also, the last two times my injection site was swollen for a couple of days, but it went away.",ADVERSE_EVENT,HIGH,1,buried
+C11,pharmacy,Patient complaint,A customer returned a Cardoxan pack saying the tablets looked chalky and crumbled. She said she had stomach cramps after taking one. Batch CX2291. Please advise on the return. Linden-Apotheke,ADVERSE_EVENT,HIGH,1,buried
+C12,patient,Breastfeeding,I am breastfeeding my 3 month old baby and my dermatologist wants to start me on Velorimab. Is it safe? I have not started yet.,MEDICAL_INFORMATION,LOW,0,trap_no_exposure
+C13,patient,Feeling tired,"Ich bin in letzter Zeit sehr müde. Ich weiß nicht, ob es an Velorimab liegt oder an der Arbeit. Gibt es dazu Daten?",ADVERSE_EVENT,HIGH,1,explicit
+C14,patient,Broken pen,The Velorimab pen I received yesterday has a crack in the window and I can't see the liquid properly. I have not used it. My next injection is on Friday. Batch VL4410.,PRODUCT_COMPLAINT,HIGH,0,explicit
+C15,pharmacy,Damaged blister,"Two packs of Cardoxan from the last delivery have damaged blisters, foil is torn. Batch CX2310. We have not dispensed them. Rosen-Apotheke Hamburg",PRODUCT_COMPLAINT,MEDIUM,0,explicit
+C16,patient,Leaflet missing,There was no package leaflet in my new box of Cardoxan. Can you send me one?,PRODUCT_COMPLAINT,MEDIUM,0,explicit
+C17,patient,Trübe Lösung,"Die Lösung im Velorimab-Pen sieht trüb aus, fast milchig. Ich habe ihn nicht benutzt. Soll ich ihn zurückschicken?",PRODUCT_COMPLAINT,MEDIUM,0,explicit
+C18,wholesaler,Wrong pack,We received 50 packs of Cardoxan 20 mg labelled with an Austrian pack design instead of the German one. Delivery note DN-77812. Please arrange collection.,PRODUCT_COMPLAINT,MEDIUM,0,explicit
+C19,patient,Pen cap,"The cap of my Velorimab pen is very hard to remove, I need pliers. This is the third pen like that. I injected fine in the end, no problems.",PRODUCT_COMPLAINT,MEDIUM,0,trap_no_ae
+C20,patient,Missed dose,I forgot my Velorimab injection yesterday. When should I take it now?,MEDICAL_INFORMATION,HIGH,0,explicit
+C21,hcp,Interaction,"Is there interaction data for Cardoxan with simvastatin? Patient is on 40 mg. Thanks, Dr. L. Wagner",MEDICAL_INFORMATION,MEDIUM,0,explicit
+C22,patient,Fridge,My fridge was broken overnight and the Velorimab pens were maybe at 15 degrees for 8 hours. Can I still use them?,MEDICAL_INFORMATION,HIGH,0,explicit
+C23,pharmacist,Lactose,Does Cardoxan 20 mg contain lactose? A customer has asked. Apotheke Mitte,MEDICAL_INFORMATION,MEDIUM,0,explicit
+C24,hcp,Studiendaten,"Sehr geehrte Damen und Herren, bitte senden Sie mir die Daten der Phase-III-Studie zu Velorimab bei Patienten über 65 Jahre. Mit freundlichen Grüßen, Dr. S. Becker",MEDICAL_INFORMATION,MEDIUM,0,explicit
+C25,patient,Alcohol,Can I drink a glass of wine at a wedding while I am on Cardoxan?,MEDICAL_INFORMATION,LOW,0,explicit
+C26,patient,Nurse visit,I would like to join the programme where a nurse shows me how to use the pen. My doctor gave me the flyer. Can someone call me? 0151 2345678,PATIENT_SUPPORT,LOW,0,explicit
+C27,patient,Reminder app,The reminder SMS from your support programme stopped coming after I changed my phone number. New number is 0176 9988776.,PATIENT_SUPPORT,LOW,0,explicit
+C28,caregiver,Anmeldung,"Guten Tag, ich möchte meinen Vater für das Patientenprogramm anmelden. Er ist 78 und braucht Hilfe bei der Injektion. Geburtsdatum 03.04.1948, Versichertennummer A123456789.",PATIENT_SUPPORT,LOW,0,pii
+C29,patient,Co-payment,Does your patient programme help with the prescription co-payment? I'm a student and it's a lot every month.,PATIENT_SUPPORT,LOW,0,explicit
+C30,patient,Unsubscribe,"Please remove me from the patient support programme, I don't need the calls anymore. I am doing well with the injections.",PATIENT_SUPPORT,LOW,0,explicit
+C31,pharmacy,Out of stock,Our wholesaler says Velorimab is out of stock until the 20th. A patient needs a pen on Thursday. What can we do? Stern-Apotheke,ORDER_SUPPLY,HIGH,0,explicit
+C32,wholesaler,Invoice,Invoice INV-2026-0912 shows 120 packs but we ordered and received 100. Please issue a credit note.,ORDER_SUPPLY,LOW,0,explicit
+C33,pharmacy,Lieferzeit,Wie lange dauert aktuell die Lieferung von Cardoxan 20 mg 100 Stück? Wir haben noch Bestand für ca. zwei Wochen.,ORDER_SUPPLY,MEDIUM,0,explicit
+C34,wholesaler,Return,We would like to return 10 packs of Cardoxan with expiry 11/2026 that we cannot sell in time. Packs are unopened and intact.,ORDER_SUPPLY,LOW,0,explicit
+C35,pharmacy,New account,We are a new pharmacy opening in Potsdam and want to order directly from Nordvia. What do we need to set up an account?,ORDER_SUPPLY,LOW,0,explicit
+C36,patient,Pharmacy can't get it,My pharmacy says they cannot get Cardoxan at the moment. I have 2 tablets left. Where else can I get it?,ORDER_SUPPLY,HIGH,0,explicit
+C37,other,Job application,"Dear HR team, please find attached my application for the Medical Science Liaison position. Kind regards, M. Schulz",OTHER,LOW,0,explicit
+C38,other,Partnership,We are a digital marketing agency specialised in pharma and would love to present our services to your brand team.,OTHER,LOW,0,explicit
+C39,other,Spam,Congratulations! Your company account has won a free iPhone. Click here to claim.,OTHER,LOW,0,explicit
+C40,patient,Thank you,I just wanted to say thank you to the nurse Petra who visited me last week. She was very kind and I feel much more confident with the pen now.,PATIENT_SUPPORT,LOW,0,trap_no_ae
