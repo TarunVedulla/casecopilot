@@ -1,0 +1,11 @@
+case_id,difficulty,gold_category,pred_category,gold_priority,pred_priority,gold_ae,pred_ae,body
+C02,buried,ADVERSE_EVENT,ORDER_SUPPLY,HIGH,MEDIUM,True,False,"Hello, I need to know when the next delivery of Velorimab reaches the pharmacy in Lichtenberg. My mother had to go to hospital last month with a bad infection so she skipped one dose, but now she is back on it. Thank you, K. Neumann"
+C03,special_situation,ADVERSE_EVENT,MEDICAL_INFORMATION,HIGH,LOW,True,False,I just found out I am 6 weeks pregnant. I have been taking Cardoxan every day. What should I do?
+C22,explicit,MEDICAL_INFORMATION,MEDICAL_INFORMATION,HIGH,MEDIUM,False,False,My fridge was broken overnight and the Velorimab pens were maybe at 15 degrees for 8 hours. Can I still use them?
+C23,explicit,MEDICAL_INFORMATION,MEDICAL_INFORMATION,MEDIUM,LOW,False,False,Does Cardoxan 20 mg contain lactose? A customer has asked. Apotheke Mitte
+C24,explicit,MEDICAL_INFORMATION,MEDICAL_INFORMATION,MEDIUM,LOW,False,False,"Sehr geehrte Damen und Herren, bitte senden Sie mir die Daten der Phase-III-Studie zu Velorimab bei Patienten über 65 Jahre. Mit freundlichen Grüßen, Dr. S. Becker"
+C32,explicit,ORDER_SUPPLY,ORDER_SUPPLY,LOW,MEDIUM,False,False,Invoice INV-2026-0912 shows 120 packs but we ordered and received 100. Please issue a credit note.
+C34,explicit,ORDER_SUPPLY,ORDER_SUPPLY,LOW,MEDIUM,False,False,We would like to return 10 packs of Cardoxan with expiry 11/2026 that we cannot sell in time. Packs are unopened and intact.
+C35,explicit,ORDER_SUPPLY,OTHER,LOW,LOW,False,False,We are a new pharmacy opening in Potsdam and want to order directly from Nordvia. What do we need to set up an account?
+C36,explicit,ORDER_SUPPLY,ORDER_SUPPLY,HIGH,MEDIUM,False,False,My pharmacy says they cannot get Cardoxan at the moment. I have 2 tablets left. Where else can I get it?
+C40,trap_no_ae,PATIENT_SUPPORT,OTHER,LOW,LOW,False,False,I just wanted to say thank you to the nurse Petra who visited me last week. She was very kind and I feel much more confident with the pen now.

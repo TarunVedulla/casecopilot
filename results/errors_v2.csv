@@ -1,0 +1,17 @@
+case_id,difficulty,gold_category,pred_category,gold_priority,pred_priority,gold_ae,pred_ae,body
+C01,explicit,ADVERSE_EVENT,ADVERSE_EVENT,HIGH,MEDIUM,True,True,"Hi, since my last Velorimab injection on Tuesday I have had a strong headache every afternoon. Is this normal? I am due again next week."
+C02,buried,ADVERSE_EVENT,ORDER_SUPPLY,HIGH,LOW,True,False,"Hello, I need to know when the next delivery of Velorimab reaches the pharmacy in Lichtenberg. My mother had to go to hospital last month with a bad infection so she skipped one dose, but now she is back on it. Thank you, K. Neumann"
+C03,special_situation,ADVERSE_EVENT,MEDICAL_INFORMATION,HIGH,MEDIUM,True,False,I just found out I am 6 weeks pregnant. I have been taking Cardoxan every day. What should I do?
+C04,special_situation,ADVERSE_EVENT,MEDICAL_INFORMATION,HIGH,MEDIUM,True,False,By mistake I took two Cardoxan tablets this morning instead of one. I feel fine. Do I need to do anything?
+C06,special_situation,ADVERSE_EVENT,MEDICAL_INFORMATION,HIGH,LOW,True,False,I have been on Velorimab for four months now and honestly I don't see any improvement at all. My skin is exactly as bad as before. Is there a higher dose?
+C07,buried,ADVERSE_EVENT,PRODUCT_COMPLAINT,HIGH,MEDIUM,True,False,"Der Pen hat heute nicht ausgelöst, die Nadel kam raus aber nichts wurde gespritzt. Beim zweiten Versuch habe ich mich in den Finger gestochen und es blutet ein bisschen. Brauche einen neuen Pen."
+C11,buried,ADVERSE_EVENT,PRODUCT_COMPLAINT,HIGH,HIGH,True,True,A customer returned a Cardoxan pack saying the tablets looked chalky and crumbled. She said she had stomach cramps after taking one. Batch CX2291. Please advise on the return. Linden-Apotheke
+C12,trap_no_exposure,MEDICAL_INFORMATION,MEDICAL_INFORMATION,LOW,MEDIUM,False,False,I am breastfeeding my 3 month old baby and my dermatologist wants to start me on Velorimab. Is it safe? I have not started yet.
+C13,explicit,ADVERSE_EVENT,MEDICAL_INFORMATION,HIGH,LOW,True,False,"Ich bin in letzter Zeit sehr müde. Ich weiß nicht, ob es an Velorimab liegt oder an der Arbeit. Gibt es dazu Daten?"
+C14,explicit,PRODUCT_COMPLAINT,PRODUCT_COMPLAINT,HIGH,MEDIUM,False,False,The Velorimab pen I received yesterday has a crack in the window and I can't see the liquid properly. I have not used it. My next injection is on Friday. Batch VL4410.
+C22,explicit,MEDICAL_INFORMATION,MEDICAL_INFORMATION,HIGH,MEDIUM,False,False,My fridge was broken overnight and the Velorimab pens were maybe at 15 degrees for 8 hours. Can I still use them?
+C23,explicit,MEDICAL_INFORMATION,MEDICAL_INFORMATION,MEDIUM,LOW,False,False,Does Cardoxan 20 mg contain lactose? A customer has asked. Apotheke Mitte
+C32,explicit,ORDER_SUPPLY,ORDER_SUPPLY,LOW,MEDIUM,False,False,Invoice INV-2026-0912 shows 120 packs but we ordered and received 100. Please issue a credit note.
+C33,explicit,ORDER_SUPPLY,ORDER_SUPPLY,MEDIUM,LOW,False,False,Wie lange dauert aktuell die Lieferung von Cardoxan 20 mg 100 Stück? Wir haben noch Bestand für ca. zwei Wochen.
+C36,explicit,ORDER_SUPPLY,ORDER_SUPPLY,HIGH,MEDIUM,False,False,My pharmacy says they cannot get Cardoxan at the moment. I have 2 tablets left. Where else can I get it?
+C40,trap_no_ae,PATIENT_SUPPORT,OTHER,LOW,LOW,False,False,I just wanted to say thank you to the nurse Petra who visited me last week. She was very kind and I feel much more confident with the pen now.
