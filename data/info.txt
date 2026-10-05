@@ -1,0 +1,1 @@
+40 synthetic test emails with gold labels
