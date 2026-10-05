@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+simulation/
+*.aux
+*.log
+.DS_Store
