@@ -1,0 +1,4 @@
+requests>=2.28
+matplotlib>=3.6
+# optional, only for PNG screenshots in simulate.py:
+# playwright>=1.40
