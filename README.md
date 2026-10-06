@@ -22,7 +22,7 @@ is sent. Every adverse event that the model flags is routed to Drug Safety by de
 ![Metrics by prompt version](docs/images/metrics_by_version.png)
 
 Main finding: the structured prompt (v2) detected *fewer* adverse events than the one-line baseline; only the explicit
-safety rules and "flag when in doubt" instruction in v3 fixed this. v3 still missed two adverse events (C02, C03),
+safety rules and "flag when in doubt" instruction in v3 fixed this. v3 still missed two adverse events (C02, C03).
 A deterministic keyword pre-screen (`prescreen.py`) combined with the model flag detected all 12 adverse events with one false alarm (C12). The keyword list was written after the error analysis, so this result is optimistic and needs validation on new emails.
 
 ## Repository structure
@@ -40,28 +40,45 @@ docs/images/  charts and simulated console views
 
 ## Run it
 
+Requires Python 3.9 or newer.
+
+**Quick check without an API key** (reproduces all numbers in the report from the recorded model outputs):
+
 ```bash
-pip install requests matplotlib
-export GROQ_API_KEY=gsk_...          # free key from console.groq.com
-python evaluate.py --provider groq --model openai/gpt-oss-120b --price-in 0.15 --price-out 0.60
-python evaluate.py --report-only     # recompute metrics from results/ without API calls
-python evaluate.py --provider mock   # offline pipeline test (numbers are meaningless)
+pip install -r requirements.txt
+python evaluate.py --report-only     # metrics, error lists and charts from results/raw_*.jsonl
+python prescreen.py                  # keyword safety net on top of the v3 flag
+python simulate.py C05 C31 C02       # simulated console views -> simulation/*.html
 ```
+
+**Full re-run against the model** (free Groq key from console.groq.com; results can differ slightly
+between runs and model versions):
+
+```bash
+export GROQ_API_KEY=gsk_...          # Windows PowerShell: $env:GROQ_API_KEY="gsk_..."
+python evaluate.py --provider groq --model openai/gpt-oss-120b --fresh
+```
+
+`--fresh` overwrites the recorded outputs in `results/`. Groq retires models from time to time; if the model
+is no longer available, choose a current one from the Groq console.
 
 ## Simulate application scenarios
 
 ```bash
-python simulate.py C05 C31 C02                       # replay recorded results
+python simulate.py C05 C31 C02                       # replay recorded results (no key needed)
 python simulate.py --live "My pen broke and I got a rash" --sender patient   # needs GROQ_API_KEY
 ```
 
-Output: `simulation/<case>.html` and `.png` (PNG needs `pip install playwright && playwright install chromium`).
+Output: `simulation/<case>.html` (open in any browser). A PNG is created as well if Playwright is installed (`pip install playwright && playwright install chromium`).
 
 | Order with urgent patient need | Missed adverse event (limitation) |
 |---|---|
 | ![C31](docs/images/C31.png) | ![C02](docs/images/C02.png) |
 
 ## Salesforce setup (Developer Edition)
+
+The Apex classes need a Salesforce org and cannot be run locally; the unit tests run with `sf apex run test` after deployment.
+
 
 1. Case fields: `AI_Category__c`, `AI_Priority__c`, `AI_Adverse_Event__c`, `AI_Review_Required__c`, `AI_Review_Reason__c`,
    `AI_Summary__c`, `AI_Draft_Reply__c`, `AI_Template__c`, `AI_Prompt_Version__c`, `AI_Status__c`; Contact field `Sender_Type__c`.
