@@ -23,7 +23,7 @@ is sent. Every adverse event that the model flags is routed to Drug Safety by de
 
 Main finding: the structured prompt (v2) detected *fewer* adverse events than the one-line baseline; only the explicit
 safety rules and "flag when in doubt" instruction in v3 fixed this. v3 still missed two adverse events (C02, C03),
-which is why a keyword pre-screen in front of the model is recommended.
+A deterministic keyword pre-screen (`prescreen.py`) combined with the model flag detected all 12 adverse events with one false alarm (C12). The keyword list was written after the error analysis, so this result is optimistic and needs validation on new emails.
 
 ## Repository structure
 
@@ -31,6 +31,7 @@ which is why a keyword pre-screen in front of the model is recommended.
 prompts/      system_v1.txt, system_v2.txt, system_v3.txt
 data/         build_cases.py -> cases.csv (40 synthetic emails with gold labels)
 evaluate.py   runs all prompt versions, scores them, writes metrics, error lists and charts
+prescreen.py  keyword safety net on top of the v3 model flag -> results/prescreen_v3.csv
 simulate.py   replays a case through the Salesforce logic and renders a console view
 results/      raw model outputs, metrics.csv, error lists, rubric-based review of v3 replies
 salesforce/   CaseTriageService.cls (Queueable + invocable) and CaseTriageServiceTest.cls
@@ -73,7 +74,7 @@ Output: `simulation/<case>.html` and `.png` (PNG needs `pip install playwright &
 
 - All emails, names and products are fictional. No real patient or company data is used.
 - Gold labels were set by one person; the reply ratings in `results/review_sheet_v3.csv` were produced with a
-  rubric by an LLM judge (Claude) and spot-checked by the author.
-- Generative AI (Claude, Anthropic) was used to support development of this repository.
+  rubric by an LLM judge and spot-checked manually.
+- Generative AI tools were used to support development of this repository.
 
 License: MIT
